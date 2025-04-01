@@ -17,8 +17,8 @@ services:
   mongo:
     image: mongo
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=kephas
-      - MONGO_INITDB_ROOT_PASSWORD=test
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWOR}
     volumes:
       - mongo-db:/data/db
 
