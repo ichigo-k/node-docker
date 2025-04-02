@@ -13,7 +13,10 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 function connectWithRetry(){
-    mongoose.connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}`)
+    mongoose.connect(`mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}`, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
         .then(() => {
             console.log("connected to db")
         })
@@ -55,4 +58,7 @@ app.listen(PORT, () => {
     console.log("App up and running")
     console.log("Port is: ", PORT)
 })
+
+
+//Ended at 4:17:23
 
