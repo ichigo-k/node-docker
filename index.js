@@ -51,7 +51,7 @@ app.use("/api/v1/posts", postRouter)
 app.use("/api/v1/users", userRouter)
 
 app.get("/api/v1/", (req, res) => {
-    res.send("I think ohooo")
+    res.send("I think it is working, bread of heaven ")
 })
 
 app.listen(PORT, () => {
